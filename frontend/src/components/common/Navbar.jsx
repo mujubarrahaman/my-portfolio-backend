@@ -32,10 +32,10 @@ function Navbar() {
         <div className='flex items-center'>
             <Link className='list-none px-5' to={"/home"}>Home</Link>
             <Link className='list-none px-5' to={"/blogs"}>Blogs</Link>
-            <Link className='list-none px-5'>About</Link>
+            <Link className='list-none px-5 md:block hidden'>About</Link>
 
           {
-            log?<button className='button-style hidden md:block' onClick={logout} >Logout</button>:<button className='button-style hidden md:block' onClick={()=>navigate("/login")}>Login</button>
+            log?<button className='button-style  ' onClick={logout} >Logout</button>:<button className='button-style  ' onClick={()=>navigate("/login")}>Login</button>
           }
             
            
