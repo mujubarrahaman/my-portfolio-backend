@@ -12,7 +12,7 @@ app.use(cors())
 app.use(bodyParser.json());
 
 // MongoDB Connection
-mongoose.connect('mongodb://localhost:27017/blogDB').then(()=>{
+mongoose.connect('mongodb+srv://portfolio:rahaman@29@portfolio.sbwrgmw.mongodb.net//blogDB').then(()=>{
     console.log("Connection Successfull")
 })
 
