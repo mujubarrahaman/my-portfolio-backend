@@ -19,6 +19,8 @@ app.use(bodyParser.json());
 //     console.log("Connection Successfull")
 // })
 
+// DB Atlas
+
 mongoose.connect(process.env.MONGODB_URI)
   .then(() => console.log('MongoDB Connected'))
   .catch((err) => console.error('MongoDB Error:', err));
