@@ -36,6 +36,11 @@
   
   }
 
+  /* Profile */
+  .profile{
+    border-radius: 45%;
+  }
+
   /* project img */
 
   .project-container {
