@@ -5,6 +5,9 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require("cors")
 
+require('dotenv').config(); // Load .env variables
+
+
 const app = express();
 app.use(cors())
 
@@ -12,9 +15,13 @@ app.use(cors())
 app.use(bodyParser.json());
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://portfolio:rahaman@29@portfolio.sbwrgmw.mongodb.net//blogDB').then(()=>{
-    console.log("Connection Successfull")
-})
+// mongoose.connect('mongodb+srv://portfolio:rahaman@29@portfolio.sbwrgmw.mongodb.net//blogDB').then(()=>{
+//     console.log("Connection Successfull")
+// })
+
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => console.log('MongoDB Connected'))
+  .catch((err) => console.error('MongoDB Error:', err));
 
 
 // Define Schema
